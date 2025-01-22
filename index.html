@@ -28,49 +28,56 @@
 
 
 
-    <!-- Header -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facebook Page Clone</title>
+</head>
+<body>
     <header class="header">
-        <a href="#" class="facebook-logo"><img src="Assets/Logo.png" alt="logo" width="50px"></a>
+        <a href="#" class="facebook-logo"><img src="Assets/Logo.png" alt="Logo" width="50px"></a>
+        <p><span id="anne">2024</span> &copy;</p>
         <button class="mode-toggle-btn" onclick="toggleDarkMode()">Dark Mode</button>
     </header>
 
-    <!-- Main Content -->
     <main class="main-content">
-        <!-- Cover Photo -->
         <div class="cover-photo">
             <img src="Assets/About session image.png" alt="Cover Photo" width="100px">
         </div>
 
-        <!-- Profile Section -->
         <section class="profile-section">
             <div class="profile-content">
                 <div class="profile-picture">
-                    <img src="/placeholder.svg" alt="Profile Picture" style="width: 100%; height: 100%; object-fit: cover;">
+                    <img src="Assets/Hero image and main.png" alt="Profile Picture" style="width: 100%; height: 100%; object-fit: cover;">
                 </div>
                 <div class="profile-info">
-                    <h1>Irenge Rukwasha Daniel</h1>
-                    <p>Web Designer - Software Engineer</p>
-                    <p>Lorem ipsum dolor sit amet consecsecsectetur.</p>
+                    <h1>Irenge Rukwasha Daniel.</h1>
+                    <p>Web Designer - Software Engineer - Public Speaker - IT Manager</p>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
                 </div>
             </div>
             <nav class="nav-tabs">
                 <div class="nav-tab active" data-tab="posts">About me</div>
                 <div class="nav-tab" data-tab="about">Education</div>
-                <div class="nav-tab" data-tab="reviews">Skill</div>
-                <div class="nav-tab" data-tab="photos">Contact</div>
-                <div class="nav-tab" data-tab="videos">Hire me</div>
+                <div class="nav-tab" data-tab="reviews">Skills</div>
+                <div class="nav-tab" data-tab="photos">Contact me</div>
+                <div class="nav-tab" data-tab="videos">Achievements</div>
             </nav>
         </section>
 
-        <!-- Main Grid -->
         <div class="main-grid">
-            <!-- Left Column - Post Card -->
             <div class="post-card">
-                <h2 id="post-title">Latest Post</h2>
-                <p id="post-content">Check out our new design course starting next month!</p>
+                <h2 id="post-title">About me</h2>
+                <p id="post-content">
+                    Passionate changemaker and dedicated Pan-Africanist, Pioneer Generation, Cornerstone Leadership Academy, with
+over three 4 of experience in empowering youth and women through digital skills training and humanitarian project
+coordination. Proven track record in leadership, data collection, and community engagement, aiming to contribute
+to a united and prosperous Africa. 
+                </p>
             </div>
-
-            <!-- Right Column - Image Gallery -->
             <div class="image-gallery">
                 <div class="gallery-image">
                     <img src="/placeholder.svg" alt="Gallery Image 1">
@@ -87,7 +94,7 @@
             </div>
         </div>
     </main>
-
+    
     <script src="Scripts/scripts.js"></script>
     <script src="apps.js"></script>
 </body>
