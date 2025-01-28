@@ -127,7 +127,7 @@ const tabs = document.querySelectorAll('.nav-tab');
 const postTitle = document.getElementById('post-title');
 const postContent = document.getElementById('post-content');
 const galleryImages = document.querySelectorAll('.gallery-image img');
-
+let a ="2018-2024";
 const tabContent = {
     posts: {
         title: 'About me',
@@ -136,7 +136,7 @@ const tabContent = {
     },
     about: {
         title: 'Education',
-        content: 'We are a leading design academy in Africa, offering top-notch courses.',
+        content: `Mount Carmel Institute ${a} \n d dedicated Pand dedicated Pand dedicated Pand dedicated Pand dedicated Pan`,
         images: ['/placeholder.svg', '/placeholder.svg', '/placeholder.svg', '/placeholder.svg']
     },
     reviews: {
