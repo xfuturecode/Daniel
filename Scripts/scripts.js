@@ -136,7 +136,7 @@ const tabContent = {
     },
     about: {
         title: 'Education',
-        content: `Mount Carmel Institute ${a} \n d dedicated Pand dedicated Pand dedicated Pand dedicated Pand dedicated Pan`,
+        content: `Mount Carmel Institute ${a} \n 2018-2022`,
         images: ['/placeholder.svg', '/placeholder.svg', '/placeholder.svg', '/placeholder.svg']
     },
     reviews: {
