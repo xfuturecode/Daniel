@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Sitemap: https://irenge-rukwasha.com/sitemap.xml
+
+# Empêcher l'indexation des fichiers sensibles
+Disallow: /Assets/Irenge Rukwasha's CV.pdf
+Disallow: /detail.json 

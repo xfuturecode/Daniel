@@ -112,92 +112,117 @@
 
 
 
+// Dark Mode Toggle
 function toggleDarkMode() {
-    const body = document.body;
-    const button = document.querySelector('.mode-toggle-btn');
-    body.classList.toggle('dark-mode');
-    if (body.classList.contains('dark-mode')) {
-        button.textContent = 'Light Mode';
+    document.body.classList.toggle('dark-mode');
+    const modeBtn = document.querySelector('.mode-toggle-btn');
+    const icon = modeBtn.querySelector('i');
+    const text = modeBtn.querySelector('span');
+    
+    if (document.body.classList.contains('dark-mode')) {
+        icon.classList.remove('fa-moon');
+        icon.classList.add('fa-sun');
+        text.textContent = 'Light Mode';
+        localStorage.setItem('darkMode', 'enabled');
     } else {
-        button.textContent = 'Dark Mode';
+        icon.classList.remove('fa-sun');
+        icon.classList.add('fa-moon');
+        text.textContent = 'Dark Mode';
+        localStorage.setItem('darkMode', 'disabled');
     }
 }
 
-const tabs = document.querySelectorAll('.nav-tab');
-const postTitle = document.getElementById('post-title');
-const postContent = document.getElementById('post-content');
-const galleryImages = document.querySelectorAll('.gallery-image img');
-let a ="2018-2024";
-const tabContent = {
-    posts: {
-        title: 'About me',
-        content: 'Passionate changemaker and dedicated Pan-Africanist, Pioneer Generation, Cornerstone Leadership Academy, with over three 4 of experience in empowering youth and women through digital skills training and humanitarian project coordination. Proven track record in leadership, data collection, and community engagement, aiming to contribute to a united and prosperous Africa.',
-        images: ['/placeholder.svg', '/placeholder.svg', '/placeholder.svg', '/placeholder.svg']
-    },
-    about: {
-        title: 'Education',
-        content: `Mount Carmel Institute ${a} \n 2018-2022`,
-        images: ['/placeholder.svg', '/placeholder.svg', '/placeholder.svg', '/placeholder.svg']
-    },
-    reviews: {
-        title: 'Skills',
-        content: 'The courses at  transformed my design career!',
-        images: ['/placeholder.svg', '/placeholder.svg', '/placeholder.svg', '/placeholder.svg']
-    },
-    photos: {
-        title: 'Contact',
-        content: '',
-        images: ['/placeholder.svg', '/placeholder.svg', '/placeholder.svg', '/placeholder.svg']
-    },
-    videos: {
-        title: 'Achievement',
-        content: 'Watch our latest tutorial on advanced Photoshop techniques.',
-        images: ['/placeholder.svg', '/placeholder.svg', '/placeholder.svg', '/placeholder.svg']
-    }
-};
-
-function updateContent(tabName) {
-    const content = tabContent[tabName];
-    postTitle.textContent = content.title;
-    postContent.textContent = content.content;
-    galleryImages.forEach((img, index) => {
-        img.src = content.images[index];
-    });
+// Check for saved dark mode preference
+if (localStorage.getItem('darkMode') === 'enabled') {
+    document.body.classList.add('dark-mode');
+    const modeBtn = document.querySelector('.mode-toggle-btn');
+    const icon = modeBtn.querySelector('i');
+    const text = modeBtn.querySelector('span');
+    icon.classList.remove('fa-moon');
+    icon.classList.add('fa-sun');
+    text.textContent = 'Light Mode';
 }
 
-tabs.forEach(tab => {
-    tab.addEventListener('click', function() {
-        tabs.forEach(t => t.classList.remove('active'));
-        this.classList.add('active');
-        const tabName = this.getAttribute('data-tab');
-        updateContent(tabName);
+// Tab Navigation
+document.querySelectorAll('.nav-tab').forEach(tab => {
+    tab.addEventListener('click', () => {
+        // Remove active class from all tabs
+        document.querySelectorAll('.nav-tab').forEach(t => t.classList.remove('active'));
+        // Add active class to clicked tab
+        tab.classList.add('active');
+        
+        // Hide all content sections
+        document.querySelectorAll('.post-card').forEach(content => {
+            content.style.display = 'none';
+        });
+        
+        // Show selected content section
+        const contentId = `${tab.dataset.tab}-content`;
+        document.getElementById(contentId).style.display = 'block';
     });
 });
 
-// Initialize with the first tab's content
-updateContent('posts');
-function typeContent(content) {
-    let i = 0;
-    postContent.innerHTML = '';
-    const typingInterval = setInterval(() => {
-        if (i < content.length) {
-            postContent.innerHTML += content.charAt(i);
-            i++;
-        } else {
-            clearInterval(typingInterval);
-            postContent.innerHTML = content;
+// Smooth Scroll
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+            target.scrollIntoView({
+                behavior: 'smooth'
+            });
         }
-    }, 50);
-}
+    });
+});
 
-function updateContent(tabName) {
-    const content = tabContent[tabName];
-    postTitle.textContent = content.title;
-    typeContent(content.content);
-    galleryImages.forEach((img, index) => {
-        img.src = content.images[index];
+// Form Submission
+const contactForm = document.querySelector('.contact-form');
+if (contactForm) {
+    contactForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        // Add your form submission logic here
+        alert('Thank you for your message! I will get back to you soon.');
+        contactForm.reset();
     });
 }
+
+// Update Year in Footer
+document.getElementById('year').textContent = new Date().getFullYear();
+
+// Image Gallery Hover Effect
+document.querySelectorAll('.gallery-image').forEach(image => {
+    image.addEventListener('mouseenter', () => {
+        image.style.transform = 'scale(1.05)';
+    });
+    
+    image.addEventListener('mouseleave', () => {
+        image.style.transform = 'scale(1)';
+    });
+});
+
+// Add animation to skill tags
+document.querySelectorAll('.skill-tag').forEach(tag => {
+    tag.addEventListener('mouseenter', () => {
+        tag.style.transform = 'translateY(-2px)';
+    });
+    
+    tag.addEventListener('mouseleave', () => {
+        tag.style.transform = 'translateY(0)';
+    });
+});
+
+// Responsive Navigation
+const handleResponsiveNav = () => {
+    const navTabs = document.querySelector('.nav-tabs');
+    if (window.innerWidth <= 768) {
+        navTabs.style.overflowX = 'auto';
+    } else {
+        navTabs.style.overflowX = 'visible';
+    }
+};
+
+window.addEventListener('resize', handleResponsiveNav);
+handleResponsiveNav();
 
 
 

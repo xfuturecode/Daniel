@@ -1,0 +1,25 @@
+{
+    "name": "Irenge Rukwasha - Portfolio Professionnel",
+    "short_name": "Irenge Portfolio",
+    "description": "Portfolio professionnel d'Irenge Rukwasha - Web Designer, Ingénieur Logiciel, Conférencier Public et Manager IT",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "theme_color": "#1877f2",
+    "icons": [
+        {
+            "src": "Assets/Logo.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "Assets/Logo.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ],
+    "lang": "fr",
+    "dir": "ltr",
+    "orientation": "portrait",
+    "categories": ["portfolio", "professional", "web design", "software engineering"]
+} 
