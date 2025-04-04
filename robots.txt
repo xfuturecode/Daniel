@@ -1,6 +1,6 @@
 User-agent: *
 Allow: /
-Sitemap: https://irenge-rukwasha.com/sitemap.xml
+Sitemap: https://danielrukwasha.netlify.app/sitemap.xml
 
 # Empêcher l'indexation des fichiers sensibles
 Disallow: /Assets/Irenge Rukwasha's CV.pdf

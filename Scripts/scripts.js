@@ -145,20 +145,29 @@ if (localStorage.getItem('darkMode') === 'enabled') {
 
 // Tab Navigation
 document.querySelectorAll('.nav-tab').forEach(tab => {
-    tab.addEventListener('click', () => {
+    tab.addEventListener('click', function() {
         // Remove active class from all tabs
         document.querySelectorAll('.nav-tab').forEach(t => t.classList.remove('active'));
+        
         // Add active class to clicked tab
-        tab.classList.add('active');
+        this.classList.add('active');
         
         // Hide all content sections
-        document.querySelectorAll('.post-card').forEach(content => {
-            content.style.display = 'none';
+        document.querySelectorAll('.post-card').forEach(card => {
+            card.style.display = 'none';
         });
         
-        // Show selected content section
-        const contentId = `${tab.dataset.tab}-content`;
-        document.getElementById(contentId).style.display = 'block';
+        // Show the selected content section
+        const tabId = this.getAttribute('data-tab');
+        document.getElementById(`${tabId}-content`).style.display = 'block';
+        
+        // Track tab click in Google Analytics
+        if (typeof gtag === 'function') {
+            gtag('event', 'tab_click', {
+                'event_category': 'Navigation',
+                'event_label': tabId
+            });
+        }
     });
 });
 
@@ -224,6 +233,50 @@ const handleResponsiveNav = () => {
 window.addEventListener('resize', handleResponsiveNav);
 handleResponsiveNav();
 
+// Contact Form Handling
+document.getElementById('emailForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const message = document.getElementById('message').value;
+    
+    // Create mailto link
+    const mailtoLink = `mailto:your-email@example.com?subject=Contact from ${name}&body=Name: ${name}%0D%0AEmail: ${email}%0D%0A%0D%0AMessage:%0D%0A${message}`;
+    
+    // Open default email client
+    window.location.href = mailtoLink;
+    
+    // Clear form
+    this.reset();
+    
+    // Show success message
+    alert('Thank you for your message! Your email client will open.');
+});
+
+// WhatsApp Contact
+function initWhatsApp() {
+    const whatsappBtn = document.querySelector('.whatsapp-btn');
+    if (whatsappBtn) {
+        // Add click event listener for analytics
+        whatsappBtn.addEventListener('click', function() {
+            // Track WhatsApp click in Google Analytics
+            if (typeof gtag === 'function') {
+                gtag('event', 'whatsapp_click', {
+                    'event_category': 'Contact',
+                    'event_label': 'WhatsApp Button'
+                });
+            }
+        });
+    }
+}
+
+// Initialize WhatsApp functionality when DOM is loaded
+document.addEventListener('DOMContentLoaded', function() {
+    initWhatsApp();
+});
 
 
 
+
+    

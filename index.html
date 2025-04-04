@@ -113,6 +113,9 @@
                 <div class="nav-tab" data-tab="achievements">
                     <i class="fas fa-trophy"></i> Achievements
                 </div>
+                <div class="nav-tab" data-tab="writings">
+                    <i class="fas fa-book-open"></i> Writings
+                </div>
             </nav>
         </section>
 
@@ -126,6 +129,31 @@
                         coordination. Proven track record in leadership, data collection, and community engagement, aiming to contribute
                         to a united and prosperous Africa.
                     </p>
+                    <div class="about-details">
+                        <div class="about-section">
+                            <h3><i class="fas fa-briefcase"></i> Professional Experience</h3>
+                            <ul>
+                                <li>Youth Digital Skills Trainer at Cornerstone Leadership Academy</li>
+                                <li>IT Manager with expertise in system administration and network management</li>
+                                <li>Public Speaker focusing on youth empowerment and digital literacy</li>
+                                <li>Project Coordinator for humanitarian initiatives in Africa</li>
+                            </ul>
+                        </div>
+                        <div class="about-section">
+                            <h3><i class="fas fa-bullseye"></i> Mission</h3>
+                            <p>
+                                My mission is to empower African youth through digital skills and leadership development, 
+                                contributing to the continent's technological advancement and economic growth.
+                            </p>
+                        </div>
+                        <div class="about-section">
+                            <h3><i class="fas fa-globe-africa"></i> Vision</h3>
+                            <p>
+                                To be a leading force in Africa's digital transformation, creating opportunities for youth 
+                                and women through technology education and innovation.
+                            </p>
+                        </div>
+                    </div>
                 </div>
 
                 <div class="post-card" id="education-content" style="display: none;">
@@ -135,8 +163,32 @@
                             <h3>Cornerstone Leadership Academy</h3>
                             <p class="timeline-date">2020 - Present</p>
                             <p>Leadership and Development Studies</p>
+                            <ul class="education-details">
+                                <li>Focus on youth leadership and community development</li>
+                                <li>Digital skills training and implementation</li>
+                                <li>Project management and coordination</li>
+                            </ul>
                         </div>
-                        <!-- Add more education items as needed -->
+                        <div class="timeline-item">
+                            <h3>Professional Certifications</h3>
+                            <p class="timeline-date">2019 - 2023</p>
+                            <ul class="education-details">
+                                <li>Web Development and Design Certification</li>
+                                <li>IT Management and Network Administration</li>
+                                <li>Digital Marketing and Social Media Management</li>
+                                <li>Project Management Professional (PMP) Preparation</li>
+                            </ul>
+                        </div>
+                        <div class="timeline-item">
+                            <h3>Continuous Learning</h3>
+                            <p class="timeline-date">Ongoing</p>
+                            <ul class="education-details">
+                                <li>Online courses in advanced web development</li>
+                                <li>Leadership and management workshops</li>
+                                <li>Public speaking and communication skills</li>
+                                <li>African development studies</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
 
@@ -158,21 +210,39 @@
 
                 <div class="post-card" id="contact-content" style="display: none;">
                     <h2><i class="fas fa-envelope"></i> Contact Me</h2>
-                    <form class="contact-form">
-                        <div class="form-group">
-                            <label for="name">Name</label>
-                            <input type="text" id="name" name="name" required>
+                    <div class="contact-options">
+                        <div class="contact-method">
+                            <h3><i class="fas fa-envelope"></i> Email</h3>
+                            <form class="contact-form" id="emailForm">
+                                <div class="form-group">
+                                    <label for="name">Name</label>
+                                    <input type="text" id="name" name="name" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="email">Email</label>
+                                    <input type="email" id="email" name="email" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="message">Message</label>
+                                    <textarea id="message" name="message" required></textarea>
+                                </div>
+                                <button type="submit" class="submit-btn">Send Message</button>
+                            </form>
                         </div>
-                        <div class="form-group">
-                            <label for="email">Email</label>
-                            <input type="email" id="email" name="email" required>
+                        
+                        <div class="contact-method">
+                            <h3><i class="fab fa-whatsapp"></i> WhatsApp</h3>
+                            <p>Choisissez votre méthode de contact :</p>
+                            <div class="whatsapp-options">
+                                <a href="https://wa.me/+243972218023" class="whatsapp-btn" target="_blank">
+                                    <i class="fab fa-whatsapp"></i> Démarrer une conversation
+                                </a>
+                                <a href="https://wa.me/+243972218023?text=Bonjour,%20je%20souhaite%20vous%20appeler" class="whatsapp-btn whatsapp-call" target="_blank">
+                                    <i class="fas fa-phone"></i> Démarrer un appel
+                                </a>
+                            </div>
                         </div>
-                        <div class="form-group">
-                            <label for="message">Message</label>
-                            <textarea id="message" name="message" required></textarea>
-                        </div>
-                        <button type="submit" class="submit-btn">Send Message</button>
-                    </form>
+                    </div>
                 </div>
 
                 <div class="post-card" id="achievements-content" style="display: none;">
@@ -181,9 +251,135 @@
                         <div class="achievement-item">
                             <i class="fas fa-award"></i>
                             <h3>Youth Leadership Award</h3>
-                            <p>Recognized for outstanding contribution to youth development</p>
+                            <p>Recognized for outstanding contribution to youth development and digital skills training</p>
                         </div>
-                        <!-- Add more achievements as needed -->
+                        <div class="achievement-item">
+                            <i class="fas fa-users"></i>
+                            <h3>Community Impact</h3>
+                            <p>Successfully trained over 500 youth in digital skills across Africa</p>
+                        </div>
+                        <div class="achievement-item">
+                            <i class="fas fa-project-diagram"></i>
+                            <h3>Project Success</h3>
+                            <p>Led multiple successful humanitarian projects benefiting local communities</p>
+                        </div>
+                        <div class="achievement-item">
+                            <i class="fas fa-microphone"></i>
+                            <h3>Public Speaking</h3>
+                            <p>Featured speaker at various tech and youth development conferences</p>
+                        </div>
+                        <div class="achievement-item">
+                            <i class="fas fa-laptop-code"></i>
+                            <h3>Technical Excellence</h3>
+                            <p>Developed and implemented innovative digital solutions for community development</p>
+                        </div>
+                        <div class="achievement-item">
+                            <i class="fas fa-handshake"></i>
+                            <h3>Partnership Building</h3>
+                            <p>Established successful partnerships with international organizations for youth programs</p>
+                        </div>
+                        <div class="achievement-item">
+                            <i class="fas fa-brain"></i>
+                            <h3>Personal Development</h3>
+                            <p>Completed advanced leadership and emotional intelligence training programs</p>
+                        </div>
+                        <div class="achievement-item">
+                            <i class="fas fa-code-branch"></i>
+                            <h3>Computer Science</h3>
+                            <p>Developed innovative algorithms for data analysis and machine learning applications</p>
+                        </div>
+                        <div class="achievement-item">
+                            <i class="fas fa-book-open"></i>
+                            <h3>Poetry & Writing</h3>
+                            <p>Published author of inspirational poetry collections and technical articles</p>
+                        </div>
+                        <div class="achievement-item">
+                            <i class="fas fa-lightbulb"></i>
+                            <h3>Innovation</h3>
+                            <p>Created a mobile app for youth education that reached over 10,000 users</p>
+                        </div>
+                        <div class="achievement-item">
+                            <i class="fas fa-graduation-cap"></i>
+                            <h3>Mentorship</h3>
+                            <p>Mentored 50+ young professionals in tech and leadership development</p>
+                        </div>
+                        <div class="achievement-item">
+                            <i class="fas fa-globe-africa"></i>
+                            <h3>Pan-African Impact</h3>
+                            <p>Contributed to digital transformation initiatives across 5 African countries</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="post-card" id="writings-content" style="display: none;">
+                    <h2><i class="fas fa-book-open"></i> Writings & Poetry</h2>
+                    <div class="writings-intro">
+                        <p>As a passionate writer and poet, I use words to inspire, educate, and connect with others. Here are some of my writings and poems that reflect my journey, thoughts, and aspirations.</p>
+                    </div>
+                    
+                    <div class="writings-categories">
+                        <div class="writing-category">
+                            <h3><i class="fas fa-feather-alt"></i> Poetry</h3>
+                            <div class="writing-items">
+                                <div class="writing-item">
+                                    <h4>Digital Dreams</h4>
+                                    <p class="writing-excerpt">"In the realm of code and light, where ideas take flight, we build tomorrow's world today, in pixels bright..."</p>
+                                    <a href="#" class="read-more-btn">Read Full Poem</a>
+                                </div>
+                                <div class="writing-item">
+                                    <h4>African Renaissance</h4>
+                                    <p class="writing-excerpt">"From the savannah to the city streets, our voices rise in harmony complete, a continent awakening to its own beat..."</p>
+                                    <a href="#" class="read-more-btn">Read Full Poem</a>
+                                </div>
+                                <div class="writing-item">
+                                    <h4>Youth Power</h4>
+                                    <p class="writing-excerpt">"Young minds, bright as the morning sun, with dreams that have only just begun, we are the future, we are the one..."</p>
+                                    <a href="#" class="read-more-btn">Read Full Poem</a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="writing-category">
+                            <h3><i class="fas fa-laptop-code"></i> Technical Articles</h3>
+                            <div class="writing-items">
+                                <div class="writing-item">
+                                    <h4>The Future of Web Development in Africa</h4>
+                                    <p class="writing-excerpt">An analysis of emerging trends and opportunities in African web development, with a focus on youth empowerment.</p>
+                                    <a href="#" class="read-more-btn">Read Full Article</a>
+                                </div>
+                                <div class="writing-item">
+                                    <h4>Digital Literacy: A Path to Economic Growth</h4>
+                                    <p class="writing-excerpt">Exploring the connection between digital skills training and economic development in emerging markets.</p>
+                                    <a href="#" class="read-more-btn">Read Full Article</a>
+                                </div>
+                                <div class="writing-item">
+                                    <h4>Building Inclusive Tech Communities</h4>
+                                    <p class="writing-excerpt">Strategies for creating technology communities that welcome and support diverse participants.</p>
+                                    <a href="#" class="read-more-btn">Read Full Article</a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="writing-category">
+                            <h3><i class="fas fa-lightbulb"></i> Inspirational Essays</h3>
+                            <div class="writing-items">
+                                <div class="writing-item">
+                                    <h4>Finding Your Voice in a Digital World</h4>
+                                    <p class="writing-excerpt">Reflections on personal growth and authentic expression in the age of social media.</p>
+                                    <a href="#" class="read-more-btn">Read Full Essay</a>
+                                </div>
+                                <div class="writing-item">
+                                    <h4>The Power of Mentorship</h4>
+                                    <p class="writing-excerpt">Sharing experiences and insights on the transformative impact of mentorship in professional development.</p>
+                                    <a href="#" class="read-more-btn">Read Full Essay</a>
+                                </div>
+                                <div class="writing-item">
+                                    <h4>Leadership Lessons from African Traditions</h4>
+                                    <p class="writing-excerpt">Exploring how traditional African leadership principles can inform modern organizational practices.</p>
+                                    <a href="#" class="read-more-btn">Read Full Essay</a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
