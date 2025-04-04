@@ -1,7 +1,7 @@
 /* Mode Toggle Button */
 .mode-toggle-btn {
     background-color: var(--primary-color);
-    color: white;
+    color: #1c1e21;
     border: none;
     padding: 0.5rem 1rem;
     border-radius: 6px;
@@ -15,7 +15,7 @@
 }
 
 .mode-toggle-btn:hover {
-    background-color: #166fe5;
+    background-color: var(--secondary-color);
     transform: translateY(-2px);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
 }
@@ -76,19 +76,18 @@
 
 .submit-btn {
     background-color: var(--primary-color);
-    color: white;
+    color: #1c1e21;
     border: none;
-    padding: 0.8rem 1.5rem;
+    padding: 0.75rem 1.5rem;
     border-radius: 6px;
-    font-weight: 500;
     cursor: pointer;
+    font-weight: 500;
     transition: all 0.3s ease;
-    align-self: flex-start;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 100%;
 }
 
 .submit-btn:hover {
-    background-color: #166fe5;
+    background-color: var(--secondary-color);
     transform: translateY(-2px);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
 }
@@ -158,14 +157,18 @@
 }
 
 .action-btn {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    padding: 0.8rem 1.5rem;
+    background-color: var(--primary-color);
+    color: #1c1e21;
+    border: none;
+    padding: 0.75rem 1.5rem;
     border-radius: 6px;
+    cursor: pointer;
     font-weight: 500;
     transition: all 0.3s ease;
     text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
 }
 
 .action-btn:first-child {
@@ -179,6 +182,7 @@
 }
 
 .action-btn:hover {
+    background-color: var(--secondary-color);
     transform: translateY(-2px);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
 }
@@ -222,31 +226,26 @@
 }
 
 .whatsapp-btn {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 0.5rem;
-    background-color: #25D366;
-    color: white;
-    padding: 1rem 2rem;
-    border-radius: 5px;
-    text-decoration: none;
-    font-weight: 600;
+    background-color: var(--primary-color);
+    color: #1c1e21;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 500;
     transition: all 0.3s ease;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
     width: 100%;
-}
-
-.whatsapp-btn.whatsapp-call {
-    background-color: #128C7E;
+    justify-content: center;
 }
 
 .whatsapp-btn:hover {
+    background-color: var(--secondary-color);
     transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(37, 211, 102, 0.2);
-}
-
-.whatsapp-btn.whatsapp-call:hover {
-    box-shadow: 0 4px 12px rgba(18, 140, 126, 0.2);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
 }
 
 .whatsapp-btn i {
