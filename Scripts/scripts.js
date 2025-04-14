@@ -199,15 +199,15 @@ if (contactForm) {
 document.getElementById('year').textContent = new Date().getFullYear();
 
 // Image Gallery Hover Effect
-document.querySelectorAll('.gallery-image').forEach(image => {
-    image.addEventListener('mouseenter', () => {
-        image.style.transform = 'scale(1.05)';
-    });
+// document.querySelectorAll('.gallery-image').forEach(image => {
+//     image.addEventListener('mouseenter', () => {
+//         image.style.transform = 'scale(1.05)';
+//     });
     
-    image.addEventListener('mouseleave', () => {
-        image.style.transform = 'scale(1)';
-    });
-});
+//     image.addEventListener('mouseleave', () => {
+//         image.style.transform = 'scale(1)';
+//     });
+// });
 
 // Add animation to skill tags
 document.querySelectorAll('.skill-tag').forEach(tag => {
@@ -242,7 +242,7 @@ document.getElementById('emailForm').addEventListener('submit', function(e) {
     const message = document.getElementById('message').value;
     
     // Create mailto link
-    const mailtoLink = `mailto:your-email@example.com?subject=Contact from ${name}&body=Name: ${name}%0D%0AEmail: ${email}%0D%0A%0D%0AMessage:%0D%0A${message}`;
+    const mailtoLink = `mailto:danielrukwasha01@gmail.com?subject=Contact from ${name}&body=Name: ${name}%0D%0AEmail: ${email}%0D%0A%0D%0AMessage:%0D%0A${message}`;
     
     // Open default email client
     window.location.href = mailtoLink;
@@ -279,4 +279,3 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
-    
